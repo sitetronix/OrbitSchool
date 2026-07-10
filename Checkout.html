@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Оформлення замовлення</title>
+
+<link rel="stylesheet" href="check.css">
+
+</head>
+
+<body>
+
+<div class="checkout">
+
+    <h1>🛒 Оформлення замовлення</h1>
+
+    <div class="order-box">
+
+        <h2>Ваше замовлення</h2>
+
+        <div id="order-items"></div>
+
+        <div class="total">
+            Сума:
+            <span id="order-total">0</span>
+            грн
+        </div>
+
+    </div>
+
+    <form id="checkout-form">
+
+        <input
+            type="text"
+            id="firstName"
+            placeholder="Ім'я"
+            required>
+
+        <input
+            type="text"
+            id="lastName"
+            placeholder="Прізвище"
+            required>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Телефон"
+            required>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email">
+
+        <textarea
+            id="comment"
+            placeholder="Коментар"></textarea>
+
+        <button type="submit">
+            Підтвердити замовлення
+        </button>
+
+    </form>
+
+
+
+</div>
+
+<!-- <img src="ImagesCards/Gogo.gif" class="center-gif" style="display:block; margin:20px auto; max-width:300px;">  -->
+
+<script src="checkout.js">
+
+// const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// // =====================
+// // ORDER PREVIEW (страница оформления)
+// // =====================
+// const orderBox = document.getElementById("order-items");
+// const totalBox = document.getElementById("order-total");
+
+// if (orderBox && totalBox) {
+
+//   let total = 0;
+
+//   cart.forEach(item => {
+
+//     total += item.price;
+
+//     const div = document.createElement("div");
+//     div.classList.add("order-item");
+
+//     div.innerHTML = `
+//       <span>${item.name}</span>
+//       <span>${item.price} грн</span>
+//     `;
+
+//     orderBox.appendChild(div);
+//   });
+
+//   totalBox.textContent = total;
+// }
+
+// // =====================
+// // CHECKOUT FORM + TELEGRAM
+// // =====================
+// const form = document.getElementById("checkout-form");
+
+// if (form) {
+
+//   form.addEventListener("submit", async (e) => {
+//     e.preventDefault();
+
+//     const firstName = document.getElementById("firstName").value;
+//     const lastName = document.getElementById("lastName").value;
+//     const phone = document.getElementById("phone").value;
+//     const email = document.getElementById("email").value;
+//     const comment = document.getElementById("comment").value;
+
+//     let total = 0;
+//     let text = `🛒 НОВЕ ЗАМОВЛЕННЯ\n\n`;
+
+//     text += `👤 Ім'я: ${firstName} ${lastName}\n`;
+//     text += `📞 Телефон: ${phone}\n`;
+//     text += `📧 Email: ${email}\n`;
+//     text += `💬 Коментар: ${comment || "-"}\n\n`;
+
+//     text += `📚 КУРСИ:\n`;
+
+//     cart.forEach(item => {
+//       text += `• ${item.name} — ${item.price} грн\n`;
+//       total += item.price;
+//     });
+
+//     text += `\n💰 СУМА: ${total} грн`;
+
+//     const BOT_TOKEN = "8753837379:AAHcCFmHdbLTnv86OXDLiszfaGhVUr1Hj4A"; // ⚠️ не храни в открытом JS
+//     const CHAT_ID = "6167594260";
+
+//     try {
+//       await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify({
+//           chat_id: CHAT_ID,
+//           text: text
+//         })
+//       });
+
+//       localStorage.removeItem("cart");
+
+//       alert("✅ Замовлення відправлено!");
+//       window.location.href = "index1.html";
+
+//     } catch (err) {
+//       console.error(err);
+//       alert("❌ Помилка відправки");
+//     }
+//   });
+// }
+</script>
+
+</body>
+</html>

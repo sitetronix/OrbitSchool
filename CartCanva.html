@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OrbitLearn - Course</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:white;
+  color:#111;
+}
+
+/* =========================
+COURSE PAGE (FIXED PADDING)
+========================= */
+
+.course-page{
+  padding:40px 8% 120px 8%; /* 🔥 БЫЛО 120px сверху → стало 40px */
+}
+
+/* MINI NAV */
+
+.mini-navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 0; /* 🔥 чуть компактнее */
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  background:white;
+  z-index:10;
+}
+
+.mini-logo{
+  font-weight:700;
+  font-size:18px;
+}
+
+.mini-links{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.mini-links a{
+  text-decoration:none;
+  color:black;
+  font-size:14px;
+}
+
+/* HERO */
+
+
+.course-hero{
+  display:flex;
+  gap:40px;
+  margin-top:60px;
+  flex-wrap:wrap;
+}
+
+.course-left{
+  flex:1;
+  min-width:280px;
+}
+
+.course-left h1{
+  font-size:48px;
+  margin:0;
+}
+
+.age{
+  font-weight:600;
+  margin-top:10px;
+}
+
+.desc{
+  margin-top:20px;
+  color:#666;
+  max-width:520px;
+  line-height:1.5;
+}
+
+.course-right{
+  flex:1;
+  min-width:280px;
+}
+
+.course-image-big{
+  width:100%;
+  height:auto;
+
+  aspect-ratio: 1344 / 768;
+
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  border-radius:20px;
+}
+
+/* =========================
+STEPS
+========================= */
+
+.steps{
+  margin-top:80px;
+}
+
+.steps h2{
+  font-size:34px;
+}
+
+.step-card{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+
+  padding:24px;
+  margin-top:20px;
+
+  border:1px solid #eee;
+  border-radius:18px;
+  background:#fafafa;
+
+  flex-wrap:wrap;
+}
+
+.step-left{
+  flex:1;
+  min-width:260px;
+}
+
+.step-right{
+  flex:1;
+  min-width:260px;
+}
+
+.rec-dot{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  background:red;
+  border-radius:50%;
+  margin-right:8px;
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+  0%{opacity:1}
+  50%{opacity:0.2}
+  100%{opacity:1}
+}
+
+.video-box{
+  width:100%;
+  height:320px;   /* было 220px → делаем выше */
+  border-radius:14px;
+  overflow:hidden;
+  background:#000;
+}
+
+.video-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;  /* ВАЖНО: заполняет весь блок */
+  object-position:center top; /* чуть выше фокус изображения */
+}
+/* =========================
+FEATURES
+========================= */
+
+.for-section{
+  margin-top:80px;
+}
+
+.for-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.for-card{
+  background:#f6f6f6;
+  padding:18px;
+  border-radius:16px;
+}
+
+/* =========================
+EXPERT
+========================= */
+
+.expert{
+  margin-top:80px;
+}
+
+.expert-box{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+
+  padding:24px;
+  margin-top:20px;
+
+  border:1px solid #eee;
+  border-radius:20px;
+}
+
+.expert-photo{
+  width:180px;
+  height:180px;
+  background:#ddd;
+  border-radius:16px;
+}
+
+.expert-info{
+  flex:1;
+}
+
+/* =========================
+BONUS
+========================= */
+
+.bonus-section{
+  margin-top:80px;
+}
+
+.bonus-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.bonus-card{
+  background:linear-gradient(135deg,#f7f7f7,#fff);
+  padding:18px;
+  border-radius:16px;
+  border:1px solid #eee;
+}
+
+/* =========================
+FORM
+========================= */
+
+.contact-section{
+  margin-top:100px;
+  padding:80px 40px;
+  background:linear-gradient(135deg,#111,#222);
+  color:white;
+  border-radius:30px;
+}
+
+.contact-wrapper{
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.contact-text{
+  flex:1;
+  min-width:280px;
+}
+
+.contact-text h2{
+  font-size:42px;
+}
+
+.contact-text p{
+  opacity:0.8;
+  line-height:1.6;
+}
+
+.form-box{
+  flex:1;
+  min-width:280px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.form-box input{
+  padding:14px;
+  border-radius:12px;
+  border:none;
+  outline:none;
+}
+
+.form-box button{
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:white;
+  color:black;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.checkbox{
+  font-size:12px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  opacity:0.8;
+}
+
+/* =========================
+PROGRAM (UPDATED WITH BUTTON)
+========================= */
+
+.program{
+  margin-top:80px;
+}
+
+.program-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.pdf-btn{
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid #111;
+  background:#111;
+  color:white;
+  font-size:13px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.pdf-btn:hover{
+  transform:scale(1.05);
+}
+
+.accordion{
+  margin-top:20px;
+}
+
+.item{
+  border:1px solid #eee;
+  border-radius:14px;
+  margin-bottom:12px;
+  overflow:hidden;
+}
+
+.title{
+  padding:14px;
+  background:#f7f7f7;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+}
+
+.content{
+  display:none;
+  padding:14px;
+  color:#666;
+}
+
+/* =========================
+DIPLOMAS
+========================= */
+
+.diplomas{
+  margin-top:100px;
+}
+
+.diploma-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.diploma-card{
+  background:white;
+  border:1px solid #eee;
+  border-radius:18px;
+  padding:16px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.diploma-img{
+  height:180px;
+  background:#ddd;
+  border-radius:12px;
+  margin-bottom:12px;
+}
+
+.diploma-card p{
+  font-weight:600;
+}
+
+/* BACK */
+
+.back-btn{
+  margin-top:60px;
+  padding:12px 18px;
+  border:none;
+  background:black;
+  color:white;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+
+.step-tags{
+  margin-top:14px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.step-tags span{
+  color:#777;
+  font-size:19px;
+  font-weight:500;
+}
+
+.video-box video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+
+.diploma-card{
+  overflow:hidden; /* важно для эффекта увеличения */
+  border-radius:18px;
+}
+
+/* контейнер картинки */
+.diploma-img{
+  width:100%;
+  height:320px;          /* нормальный размер карточки */
+  object-fit:contain;    /* диплом НЕ обрезается */
+  background:#f5f5f5;    /* чтобы было красиво по краям */
+  transition:transform .4s ease;
+  display:block;
+}
+
+/* увеличение при наведении */
+.diploma-card:hover .diploma-img{
+  transform:scale(1.1);
+}
+
+.back-btn {
+  text-decoration: none;  /* убирает подчёркивание */
+  color: white;           /* цвет текста */
+  display: inline-block;  /* чтобы работали отступы */
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #07021b;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #9a7bff;
+  transform: translateY(-2px);
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="course-page">
+
+<!-- NAV -->
+<div class="mini-navbar">
+  <div class="mini-logo">OrbitLearn</div>
+  <div class="mini-links">
+    <a href="index1.html#courses">Курси</a>
+    <a href="#about">О курсе</a>
+    <a href="#pro">Программа</a>
+    <a href="#">Автори</a>
+    <!-- <a href="#">Преподаватели</a> -->
+    <a href="#tgForm">Замовити</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="course-hero">
+  <div class="course-left">
+    <h1>Canva Courses</h1>
+    <p class="age">Вік від 10-17 років</p>
+    <p class="desc">
+      Курси для майбутніх дизайнерів, де діти або підлітки, вивчають основні принципи роботи Canva 
+      
+    </p>
+  </div>
+
+  <div class="course-right">
+    <div class="course-image-big" style="background-image:url('ImagesCards/Canva.jpg')"></div>
+  </div>
+</div>
+
+<!-- STEPS -->
+<div class="steps"  id="about">
+  <h2>Від простого до складного</h2>
+
+  <div class="step-card">
+    <div class="step-left">
+      <h3><span class="rec-dot"></span>Робота з софтом</h3>
+      <p>Налаштування Google Meets + Canva.</p>
+<div class="step-tags">
+  <span>Налаштування профілів Canva, Google Meets та інших програм необхідних для роботи дизайнерів.</span>
+ 
+</div>
+
+    </div>
+    <div class="step-right"><div class="video-box"> <img src="ImagesCards/team1.gif"></div></div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-left">
+      <h3>Вивчення основного функціоналу Canva</h3>
+      <p>Вивчення Canva.</p>
+      <div class="step-tags">
+        <span>Наші учні разом з вчителем вивчають основний функціонла, необхідний для роботи в Canva.</span>
+ </div>
+    </div>
+    <div class="step-right"><div class="video-box"> <img src="ImagesCards/Canva777.gif"></div></div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-left">
+      <h3>Створення проєктів</h3>
+      <p>Перші кроки </p>
+      <div class="step-tags">
+        <span>Наші учні разом з вчителем, створюють перші проєктив в Canva, освоюють функціонал та поглиблюють свої знання.</span>
+ </div>
+    </div>
+    <div class="step-right"><div class="video-box"><img src="ImagesCards/CanvaNew.gif"></div></div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-left">
+      <h3>Більше проєктів</h3>
+      <p>Вивчення основних принципів дизайну </p>
+      <div class="step-tags">
+        <span>Наші учні разом з вчителем, створюють більше проєктів в Canva, лого, банери та листівки, 
+          освоюють функціонал та поглиблюють свої знання.</span>
+ </div>
+    </div>
+    <div class="step-right"><div class="video-box"><img src="ImagesCards/Canva3.gif"></div></div>
+  </div>
+
+
+  <div class="step-card">
+    <div class="step-left">
+      <h3>Іспит + диплом</h3>
+      <p>Фінальний проєкт.</p>
+      <div class="step-tags">
+        <span>Фінальним єтапом стане складання онлайн-іспиту на якому буде проведенний рівень знань учня, а також за якістне складання єкзамену, 
+          буде отримана змога отримати безкоштове навчання</span>
+ </div>
+    </div>
+    <div class="step-right"><div class="video-box"><video autoplay muted loop playsinline>
+    <source src="ImagesCards/Diplom1.mp4" type="video/mp4">
+  </video></div></div>
+  </div>
+</div>
+
+<!-- WHO -->
+<div class="for-section">
+  <h2>Кому підійде</h2>
+  <div class="for-grid">
+    <div class="for-card">👦 Активні діти</div>
+    <div class="for-card">🚀 Майбутні програмісти</div>
+    <div class="for-card">🎮 Хочуть розвитку</div>
+  </div>
+</div>
+
+<!-- EXPERT -->
+<div class="expert">
+  <h2>Головний експерт</h2>
+  <div class="expert-box">
+    <div class="expert-photo"></div>
+    <div class="expert-info">
+      <h3>Директор по освіті</h3>
+      <p>12+ років досвіду</p>
+    </div>
+  </div>
+</div>
+
+<!-- BONUS -->
+<div class="bonus-section">
+  <h2>🎁Отримай Бонус</h2>
+  <div class="bonus-grid">
+    <div class="bonus-card">Консультація</div>
+    <div class="bonus-card">Підбір курсу</div>
+    <div class="bonus-card">Перевірка рівня</div>
+    <div class="bonus-card">Рекомендації</div>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="contact-section">
+    <div class="contact-wrapper">
+
+      <div class="contact-text">
+        <h2>Отримайте консультацію</h2>
+        <p>Безкоштовна допомога методиста для вибору правильного курсу для дитини.</p>
+      </div>
+
+      <form class="form-box" id="tgForm">
+
+    <input name="name" placeholder="Ім'я" required>
+    <input name="surname" placeholder="Прізвище" required>
+    <input name="phone" placeholder="Телефон" required>
+    <input name="email" placeholder="Email" required>
+    <input type="hidden" name="course" value="Canva">
+
+    <label class="checkbox">
+      <input type="checkbox" name="agree" required>
+      Я погоджуюсь на обробку даних
+    </label>
+
+    <button type="submit">Відправити</button>
+
+  </form>
+    </div>
+  </div>
+
+<!-- PROGRAM -->
+<div class="program">
+
+  <div class="program-header">
+    <h2>Програма навчання</h2>
+
+    <!-- 🔥 PDF BUTTON -->
+    <button class="pdf-btn" onclick="alert('Тут будет скачивание PDF')" id="pro">
+      📄 Скачати PDF
+    </button>
+  </div>
+
+  <div class="accordion">
+    <div class="item">
+      <div class="title">Налаштування Комп'ютера</div>
+      <div class="content">Встановлення необхідного софту для роботи в Canva, разом з учнями.</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Вивчення функціоналу Canva</div>
+      <div class="content">Вивчення функціоналу Canva, його основних єлементів, необхідних для створення проєктів.</div>
+    </div>
+
+    <div class="item">
+      <div class="title">Створення перших проєктів</div>
+      <div class="content">Створення перших проєктів у Canva тощо...</div>
+    </div>
+     <div class="item">
+      <div class="title">Перевірка знань</div>
+      <div class="content">Після вивчення матеріалу, перевірка основних знань, завдяки тестуванню тощо...</div>
+    </div>
+     <div class="item">
+      <div class="title">Написання міні-програм</div>
+      <div class="content">Написання програм на Python Visual Studio Code, добір знань та навичок </div>
+    </div>
+     <div class="item">
+      <div class="title">Поглиблене вивчення</div>
+      <div class="content">Додаткове вивченя умов,циклів та функції в Python, перевірка вже вивченого</div>
+    </div>
+     <div class="item">
+      <div class="title">Проведення тестування</div>
+      <div class="content">Наші учні разом з вчителем проводять декілька онлайн-тестуваннь для закріплення основних знань</div>
+    </div>
+     <div class="item">
+      <div class="title">Закріплення</div>
+      <div class="content">Підготовка до основного єтапу, це скаладання тесту з Python на рівні 11 класу з інформатики, або навіть ВНЗ</div>
+    </div>
+  </div>
+  <div class="item">
+      <div class="title">Тестування</div>
+      <div class="content">Проведення тестування на онлайн плфтформі під наглядом вчителя</div>
+    </div>
+  </div>
+  <div class="item">
+      <div class="title">Атестація</div>
+      <div class="content">Отрмання диплому та додатку</div>
+    </div>
+  </div>
+</div>
+
+<!-- DIPLOMAS -->
+<div class="diplomas">
+  <h2>🎓 Дипломи випускника</h2>
+
+  <div class="diploma-grid">
+
+    <div class="diploma-card">
+      <img class="diploma-img" src="ImagesCards/Diplom.jpg" alt="Сертифікат Python Junior">
+      <p>Диплом Python Junior</p>
+    </div>
+
+    <div class="diploma-card">
+      <img class="diploma-img" src="ImagesCards/Dotatok.png" alt="Сертифікат Python Junior">
+      <p>Додаток Practical Coding</p>
+    </div>
+
+  </div>
+</div>
+
+<a href="index1.html#courses" class="back-btn">
+  ← До курсів
+</a>
+
+</section>
+
+<script>
+document.querySelectorAll(".item").forEach(i=>{
+  i.querySelector(".title").onclick=()=>{
+    const c=i.querySelector(".content");
+    c.style.display=c.style.display==="block"?"none":"block";
+  }
+});
+
+
+const BOT_TOKEN = "8753837379:AAHcCFmHdbLTnv86OXDLiszfaGhVUr1Hj4A"; 
+const CHAT_ID = "6167594260";
+
+document.getElementById("tgForm").addEventListener("submit", (e) => {
+  e.preventDefault(); // блокируем стандартную отправку
+
+  const form = e.target;
+
+  const name = form.name.value.trim();
+  const surname = form.surname.value.trim();
+  const phone = form.phone.value.trim();
+  const email = form.email.value.trim();
+  const agree = form.agree.checked;
+  const course = form.course.value;
+
+  // доп. защита (хотя required уже работает)
+  if (!agree) {
+    alert("Потрібно погодитись на обробку даних");
+    return;
+  }
+
+  const message =
+`📩 Нова заявка:
+🎓 Курс: ${course}
+👤 Ім'я: ${name}
+👤 Прізвище: ${surname}
+📞 Телефон: ${phone}
+📧 Email: ${email}`;
+
+  fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      text: message
+    })
+  });
+
+  alert("Заявку відправлено!");
+  form.reset();
+});
+</script>
+
+</body>
+</html>

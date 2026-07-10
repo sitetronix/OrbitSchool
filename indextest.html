@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OrbitLearn</title>
+
+<style>
+
+```css
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:white;
+  font-family:Arial,sans-serif;
+  color:#111;
+  overflow-x:hidden;
+}
+
+canvas{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 12%,
+    black 100%
+  );
+}
+
+/* =========================
+GLOBAL ATMOSPHERIC LIGHT
+========================= */
+
+.bg-light{
+  position:fixed;
+  inset:0;
+  z-index:-5;
+
+  background:
+    radial-gradient(
+      circle at center,
+
+      rgba(181,147,255,0.24) 0%,
+
+      rgba(181,147,255,0.18) 18%,
+
+      rgba(181,147,255,0.12) 34%,
+
+      rgba(181,147,255,0.07) 48%,
+
+      rgba(181,147,255,0.035) 60%,
+
+      rgba(181,147,255,0.015) 72%,
+
+      rgba(255,255,255,0.96) 86%,
+
+      white 100%
+    );
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+  width:100%;
+  height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  position:relative;
+
+  overflow:hidden;
+
+  isolation:isolate;
+}
+
+/* MAIN PURPLE GLOW */
+
+.hero::before{
+  content:'';
+
+  position:absolute;
+
+  left:50%;
+  bottom:-280px;
+
+  transform:translateX(-50%);
+
+  width:1700px;
+  height:850px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+
+      rgba(168,117,255,0.24) 0%,
+
+      rgba(168,117,255,0.16) 22%,
+
+      rgba(168,117,255,0.10) 40%,
+
+      rgba(168,117,255,0.055) 56%,
+
+      rgba(168,117,255,0.02) 70%,
+
+      transparent 100%
+    );
+
+  filter:blur(90px);
+
+  opacity:1;
+
+  pointer-events:none;
+
+  z-index:-1;
+}
+
+/* EXTRA SOFT TRANSITION */
+
+.hero::after{
+  content:'';
+
+  position:absolute;
+
+  left:50%;
+  bottom:-420px;
+
+  transform:translateX(-50%);
+
+  width:2000px;
+  height:1000px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+
+      rgba(168,117,255,0.14) 0%,
+
+      rgba(168,117,255,0.08) 28%,
+
+      rgba(168,117,255,0.04) 52%,
+
+      rgba(168,117,255,0.015) 72%,
+
+      transparent 100%
+    );
+
+  filter:blur(120px);
+
+  opacity:0.9;
+
+  pointer-events:none;
+
+  z-index:-2;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+  position:fixed;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  width:92%;
+  max-width:1400px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:18px 28px;
+
+  border-radius:24px;
+
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(18px);
+
+  border:1px solid rgba(0,0,0,0.05);
+
+  z-index:100;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:700;
+}
+
+.nav-links{
+  display:flex;
+  gap:42px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#111;
+  font-size:14px;
+  font-weight:500;
+}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.lang{
+  padding:10px 14px;
+  border-radius:12px;
+  background:#f4f4f4;
+  font-size:13px;
+  font-weight:600;
+}
+
+.cart{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:#f4f4f4;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  position:relative;
+}
+
+.cart::after{
+  content:'2';
+
+  position:absolute;
+  top:-4px;
+  right:-4px;
+
+  width:18px;
+  height:18px;
+
+  border-radius:50%;
+
+  background:black;
+  color:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:10px;
+}
+
+.login-btn{
+  border:none;
+  background:black;
+  color:white;
+
+  padding:12px 18px;
+
+  border-radius:12px;
+
+  cursor:pointer;
+
+  font-size:13px;
+  font-weight:600;
+}
+
+/* =========================
+ORBIT
+========================= */
+
+.orbit-wrapper{
+  position:relative;
+  width:900px;
+  height:900px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.orbit{
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(145,115,255,0.22);
+}
+
+.orbit-1{
+  width:380px;
+  height:380px;
+}
+
+.orbit-2{
+  width:650px;
+  height:650px;
+}
+
+/* =========================
+CORE
+========================= */
+
+.energy-core{
+  position:absolute;
+
+  width:180px;
+  height:180px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(255,255,255,1) 0%,
+    rgba(216,195,255,0.9) 18%,
+    rgba(180,140,255,0.45) 40%,
+    rgba(255,255,255,0) 75%
+  );
+
+  filter:blur(10px);
+
+  transition:transform 0.25s ease;
+}
+
+/* =========================
+CARDS
+========================= */
+
+.orbit-card{
+  position:absolute;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:14px 18px;
+
+  border-radius:18px;
+
+  background:rgba(255,255,255,0.85);
+
+  backdrop-filter:blur(18px);
+
+  border:1px solid rgba(255,255,255,0.9);
+
+  box-shadow:0 10px 40px rgba(0,0,0,0.05);
+
+  font-size:14px;
+  font-weight:500;
+
+  white-space:nowrap;
+}
+
+/* positions */
+
+.card-top{top:80px;}
+.card-right{right:40px;}
+.card-bottom{bottom:100px;}
+.card-left{left:60px;}
+.card-inner-top{top:230px;}
+.card-inner-bottom{bottom:240px;}
+
+/* =========================
+COURSES SECTION
+========================= */
+
+.courses-section{
+  position:relative;
+
+  padding:120px 8%;
+
+  background:
+    linear-gradient(
+      to bottom,
+
+      rgba(255,255,255,0.20) 0%,
+
+      rgba(255,255,255,0.55) 12%,
+
+      rgba(255,255,255,0.82) 24%,
+
+      white 42%
+    );
+
+  overflow:hidden;
+}
+
+/* SOFT PURPLE CONTINUATION */
+
+.courses-section::before{
+  content:'';
+
+  position:absolute;
+
+  top:-240px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:1600px;
+  height:500px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+
+      rgba(168,117,255,0.11) 0%,
+
+      rgba(168,117,255,0.07) 30%,
+
+      rgba(168,117,255,0.03) 55%,
+
+      transparent 100%
+    );
+
+  filter:blur(80px);
+
+  pointer-events:none;
+
+  z-index:0;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.courses-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+
+  margin-bottom:30px;
+}
+
+.courses-header h2{
+  font-size:52px;
+  margin:0;
+}
+```
+
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-light"></div>
+
+<nav class="navbar">
+  <div class="logo">OrbitLearn</div>
+
+  <div class="nav-links">
+    <a href="#">Курсы</a>
+    <a href="#">Отзывы</a>
+    <a href="#">Подросткам</a>
+    <a href="#">Детям</a>
+    <a href="#">Родителям</a>
+  </div>
+
+  <div class="nav-right">
+    <div class="lang">RU</div>
+    <div class="cart">🛒</div>
+    <button class="login-btn">Войти</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="orbit-wrapper" id="orbitWrapper">
+
+    <div class="orbit orbit-1"></div>
+    <div class="orbit orbit-2"></div>
+
+    <div class="energy-core" id="core"></div>
+
+    <div class="orbit-card card-top">🤖 AI</div>
+    <div class="orbit-card card-right">👨‍🏫 Преподаватели</div>
+    <div class="orbit-card card-bottom">🎁 Подарки</div>
+    <div class="orbit-card card-left">💻 Код</div>
+
+    <div class="orbit-card card-inner-top">🐍 Python</div>
+    <div class="orbit-card card-inner-bottom">📚 Предметы</div>
+
+  </div>
+</section>
+
+
+<!-- =========================
+COURSES
+========================= -->
+
+<section class="courses-section">
+
+  <!-- HEADER -->
+
+  <div class="courses-header">
+
+    <h2>Курси та напрямки</h2>
+
+    <div class="top-filters">
+
+      <button 
+      class="filter-btn active"
+      data-course="popular">
+        🔥 Популярні
+      </button>
+
+      <button 
+      class="filter-btn"
+      data-course="discount">
+        💸 Зі знижкою
+      </button>
+
+      <button 
+      class="filter-btn"
+      data-course="help">
+        🤔 Не можу визначитися
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- TABS -->
+
+  <div class="course-tabs">
+
+    <button class="course-tab" data-course="python">
+      Python для дітей
+    </button>
+
+    <button class="course-tab" data-course="teens">
+      Python для підлітків
+    </button>
+
+    <button class="course-tab" data-course="advanced">
+      Python просунутий
+    </button>
+
+    <button class="course-tab" data-course="minecraft">
+      MineCraft
+    </button>
+
+    <button class="course-tab" data-course="roblox">
+      Roblox
+    </button>
+
+    <button class="course-tab" data-course="design">
+      Дизайн
+    </button>
+
+    <button class="course-tab" data-course="frontend">
+      Frontend
+    </button>
+
+    <button class="course-tab" data-course="english">
+      Англійська
+    </button>
+
+    <button class="course-tab" data-course="math">
+      Математика
+    </button>
+
+  </div>
+
+  <!-- =========================
+POPULAR
+========================= -->
+
+  <div class="cards-grid active-grid" id="popular">
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/popular1.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Popular
+        </span>
+
+        <h3>
+          Python AI
+        </h3>
+
+        <p>
+          Найпопулярніший курс
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/popular2.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Frontend
+        </span>
+
+        <h3>
+          Frontend Developer
+        </h3>
+
+        <p>
+          HTML CSS JavaScript
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+DISCOUNT
+========================= -->
+
+  <div class="cards-grid" id="discount">
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/discount1.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Sale
+        </span>
+
+        <h3>
+          Roblox Studio
+        </h3>
+
+        <p>
+          Знижка -40%
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/discount2.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Minecraft
+        </span>
+
+        <h3>
+          Minecraft Modding
+        </h3>
+
+        <p>
+          Знижка -35%
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+HELP
+========================= -->
+
+  <div class="cards-grid" id="help">
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/help1.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Start
+        </span>
+
+        <h3>
+          Допоможемо обрати
+        </h3>
+
+        <p>
+          Підбір курсу для вас
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+PYTHON
+========================= -->
+
+  <div class="cards-grid" id="python">
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/python1.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python
+        </span>
+
+        <h3>
+          Python Game Dev
+        </h3>
+
+        <p>
+          Створення ігор на Python
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/python2.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          AI
+        </span>
+
+        <h3>
+          Python + AI
+        </h3>
+
+        <p>
+          Нейромережі та AI
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/python3.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python
+        </span>
+
+        <h3>
+          Python Start
+        </h3>
+
+        <p>
+          Основи програмування
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/python4.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python
+        </span>
+
+        <h3>
+          Python Fun Projects
+        </h3>
+
+        <p>
+          Ігри та прості проекти для дітей
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+DESIGN
+========================= -->
+
+  <div class="cards-grid" id="design">
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/design1.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Canva
+        </span>
+
+        <h3>
+          Canva Design
+        </h3>
+
+        <p>
+          Банери та соцмережі
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/design2.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Photoshop
+        </span>
+
+        <h3>
+          Photoshop Pro
+        </h3>
+
+        <p>
+          Графіка та фото
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+
+      <div class="course-image"
+      style="background-image:url('images/design3.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          UI/UX
+        </span>
+
+        <h3>
+          Дизайн сайтів
+        </h3>
+
+        <p>
+          Figma та web design
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<script type="module">
+
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160/build/three.module.js';
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.OrthographicCamera(
+  window.innerWidth / -2,
+  window.innerWidth / 2,
+  window.innerHeight / 2,
+  window.innerHeight / -2,
+  1,
+  3000
+);
+
+camera.position.z = 10;
+
+const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+// =====================
+// MOUSE
+// =====================
+const mouse = { x:0, y:0 };
+
+window.addEventListener('mousemove', (e)=>{
+  mouse.x = (e.clientX - window.innerWidth/2);
+  mouse.y = -(e.clientY - window.innerHeight/2);
+});
+
+// =====================
+// PARTICLES
+// =====================
+const particlesCount = 130;
+const particlePositions = [];
+const particleSpeeds = [];
+
+const safeZone = 430;
+
+for(let i=0;i<particlesCount;i++){
+
+  let x,y;
+
+  do{
+    x = (Math.random()-0.5)*window.innerWidth;
+    y = (Math.random()-0.5)*window.innerHeight;
+  } while(Math.sqrt(x*x+y*y) < safeZone);
+
+  particlePositions.push({x,y});
+  particleSpeeds.push({
+    x:(Math.random()-0.5)*0.18,
+    y:(Math.random()-0.5)*0.18
+  });
+}
+
+const positions = new Float32Array(particlesCount*3);
+
+const geometry = new THREE.BufferGeometry();
+geometry.setAttribute('position', new THREE.BufferAttribute(positions,3));
+
+const material = new THREE.PointsMaterial({
+  color:0x111111,
+  size:2,
+  transparent:true,
+  opacity:0.7
+});
+
+const particles = new THREE.Points(geometry, material);
+scene.add(particles);
+
+// =====================
+// CLICK EFFECTS
+// =====================
+
+window.addEventListener('click', ()=>{
+
+  // мягкий разлёт (НЕ слишком сильный)
+  for(let i=0;i<particlesCount;i++){
+    particleSpeeds[i].x += (Math.random()-0.5)*0.8;
+    particleSpeeds[i].y += (Math.random()-0.5)*0.8;
+  }
+
+  // пульс сферы
+  const core = document.getElementById('core');
+  core.style.transform = "scale(2)";
+  setTimeout(()=>{
+    core.style.transform = "scale(1)";
+  }, 200);
+
+});
+
+// =====================
+// ORBIT (SLOW)
+// =====================
+const orbitWrapper = document.getElementById('orbitWrapper');
+const cards = document.querySelectorAll('.orbit-card');
+
+function animate(){
+
+  requestAnimationFrame(animate);
+
+  const t = performance.now()*0.00015;
+
+  orbitWrapper.style.transform = `rotate(${t}rad)`;
+
+  cards.forEach(c=>{
+    c.style.transform = `rotate(${-t}rad)`;
+  });
+
+  for(let i=0;i<particlesCount;i++){
+
+    particlePositions[i].x += particleSpeeds[i].x;
+    particlePositions[i].y += particleSpeeds[i].y;
+
+    // лёгкое затухание скорости (чтоб не улетали навсегда)
+    particleSpeeds[i].x *= 0.99;
+    particleSpeeds[i].y *= 0.99;
+
+    positions[i*3] = particlePositions[i].x;
+    positions[i*3+1] = particlePositions[i].y;
+  }
+
+  geometry.attributes.position.needsUpdate = true;
+
+  renderer.render(scene,camera);
+}
+
+animate();
+
+/* =========================
+TABS
+========================= */
+
+const allButtons =
+document.querySelectorAll(
+  '.course-tab, .filter-btn'
+);
+
+const grids =
+document.querySelectorAll('.cards-grid');
+
+allButtons.forEach(button=>{
+
+  button.addEventListener('click',()=>{
+
+    allButtons.forEach(btn=>{
+      btn.classList.remove('active');
+    });
+
+    button.classList.add('active');
+
+    const course =
+      button.dataset.course;
+
+    grids.forEach(grid=>{
+      grid.classList.remove('active-grid');
+    });
+
+    const target =
+      document.getElementById(course);
+
+    if(target){
+      target.classList.add('active-grid');
+    }
+
+  });
+
+});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f7f8fc;
+    font-family:Arial,sans-serif;
+    color:#111;
+    padding:40px 20px;
+}
+
+.checkout{
+    max-width:900px;
+    margin:0 auto;
+}
+
+.checkout h1{
+    margin-bottom:30px;
+    font-size:38px;
+}
+
+.order-box,
+.form-box{
+    background:white;
+    border-radius:24px;
+    padding:30px;
+    margin-bottom:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.order-item{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 0;
+    border-bottom:1px solid #eee;
+}
+
+.total{
+    margin-top:20px;
+    font-size:24px;
+    font-weight:bold;
+    text-align:right;
+}
+
+.form-box input,
+.form-box textarea{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:18px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+}
+
+.form-box textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+.confirm-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:black;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.confirm-btn:hover{
+    transform:translateY(-2px);
+}
+
+#checkout-form{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+#checkout-form input,
+#checkout-form textarea{
+  width:100%;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid #e6e6e6;
+  background:#fafafa;
+  font-size:15px;
+  outline:none;
+  transition:0.25s;
+  font-family:inherit;
+}
+
+#checkout-form input:focus,
+#checkout-form textarea:focus{
+  border-color:#000;
+  background:white;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+#checkout-form textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+#checkout-form button{
+  margin-top:10px;
+  padding:16px;
+  border:none;
+  border-radius:14px;
+  background:black;
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#checkout-form button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}

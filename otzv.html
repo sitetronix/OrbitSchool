@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Відгуки</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0f0f1a;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      background: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .container {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    .reviews-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #1b1b2a;
+      padding: 20px;
+      border-radius: 16px;
+      width: 280px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .name {
+      color: #7c5cff;
+      margin-bottom: 10px;
+    }
+
+    .form-section {
+  margin-top: 60px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #1b1b2a;
+  color: white;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #7c5cff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #9a7bff;
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">← Назад</a>
+  <a href="reviews.html">Отзывы</a>
+</header>
+
+<div class="container">
+
+  <h1>Відгуки учнів та Батьків</h1>
+
+  <div class="reviews-grid">
+
+    <div class="card">
+      <div class="name">Олена</div>
+      <p>Дуже класні курси! Навчилась створювати сайти.</p>
+    </div>
+
+    <div class="card">
+      <div class="name">Максим</div>
+      <p>Цікаве навчання, все зрозуміло і практично.</p>
+    </div>
+
+    <div class="card">
+      <div class="name">Іван</div>
+      <p>Робимо ігри та проєкти, дуже подобається!</p>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="form-section">
+
+  <h2>Залишити відгук</h2>
+
+  <form>
+
+    <input type="text" placeholder="Ваше ім'я" required>
+
+    <textarea placeholder="Ваш відгук..." rows="5" required></textarea>
+
+    <button type="submit">Відправити</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>

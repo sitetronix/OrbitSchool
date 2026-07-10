@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eduson style hero</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f19;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  min-height: 100vh;
+}
+
+/* LEFT */
+.hero-content {
+  max-width: 550px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.primary {
+  background: #4f7cff;
+  color: white;
+}
+
+.primary:hover {
+  background: #365fd6;
+}
+
+.secondary {
+  border: 1px solid #ffffff30;
+  color: white;
+}
+
+.secondary:hover {
+  background: #ffffff10;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+  flex-wrap: wrap;
+}
+
+/* RIGHT VISUAL */
+.hero-visual {
+  width: 320px;
+  height: 320px;
+  background: linear-gradient(145deg, #1a2238, #0f1424);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.card {
+  text-align: center;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card p {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.progress {
+  width: 140px;
+  height: 6px;
+  background: #4f7cff;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+  <div class="hero-content">
+    <h1>Обучение, которое реально меняет карьеру</h1>
+
+    <p>
+      Практические онлайн-курсы от экспертов. Учись в удобное время и развивай навыки, которые востребованы на рынке.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#" class="btn primary">Начать обучение</a>
+      <a href="#" class="btn secondary">Смотреть курсы</a>
+    </div>
+
+    <div class="stats">
+      <div>📚 200+ курсов</div>
+      <div>👨‍🏫 эксперты</div>
+      <div>🚀 карьерный рост</div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="card">
+      <h3>UI/UX Design</h3>
+      <p>Продвинутый курс</p>
+      <div class="progress"></div>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>

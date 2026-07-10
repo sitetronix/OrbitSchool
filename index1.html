@@ -1,0 +1,3059 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="css.css">
+<title>OrbitLearn</title>
+
+<style>
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="bg-light"></div>
+
+<nav class="navbar">
+  <div class="logo">OrbitLearn</div>
+
+  <div class="nav-links">
+    <a href="#courses">Курси</a>
+    <a href="kids.html">Дітям</a>
+    <a href="Perents.html">Батькам</a>
+     <a href="#consult7">Консультація</a>
+
+  </div>
+
+  <div class="nav-right">
+    <div class="lang">UA</div>
+    <div class="cart">
+    🛒 <span id="cart-count">0</span>
+</div>
+    <button class="login-btn">Войти</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="orbit-wrapper" id="orbitWrapper">
+
+    <div class="orbit orbit-1"></div>
+    <div class="orbit orbit-2"></div>
+
+    <div class="energy-core" id="core"></div>
+
+    <div class="orbit-card card-top">🤖 AI</div>
+    <div class="orbit-card card-right">👨‍🏫ТОП Вчителя</div>
+    <div class="orbit-card card-bottom">🎁 Подарунки</div>
+    <div class="orbit-card card-left">💻 Код</div>
+
+    <div class="orbit-card card-inner-top">🐍 Python</div>
+    <div class="orbit-card card-inner-bottom">📚 Предмети</div>
+
+
+  </div>
+</section>
+
+
+<!-- =========================
+COURSES
+========================= -->
+
+<section class="courses-section" id="courses">
+
+  <!-- HEADER -->
+
+  <div class="courses-header">
+
+    <h2>Курси та напрямки</h2>
+
+    <div class="top-filters">
+
+      <button 
+      class="filter-btn active"
+      data-course="popular">
+        🔥 Популярні
+      </button>
+
+      <button 
+      class="filter-btn"
+      data-course="discount">
+        💸 Зі знижкою
+      </button>
+
+      <button 
+      class="filter-btn"
+      data-course="help">
+        🤔 Не можу визначитися
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- TABS -->
+
+  <div class="course-tabs">
+
+    <button class="course-tab" data-course="python">
+      Програмування для дітей
+    </button>
+
+    <button class="course-tab" data-course="teens">
+      Програмування для підлітків
+    </button>
+
+    <button class="course-tab" data-course="advanced">
+      Програмування просунуте
+    </button>
+
+     <button class="course-tab" data-course="ai">
+      Робота з AI (Штучний Інтелект)
+    </button>
+
+    <button class="course-tab" data-course="minecraft">
+      GameDev (Створення Ігор)
+    </button>
+
+    <button class="course-tab" data-course="roblox">
+     Створення Мультиків
+    </button>
+
+    <button class="course-tab" data-course="design">
+      Дизайн (Робота з Фотографіями)
+    </button>
+
+    <button class="course-tab" data-course="frontend">
+      FrontEnd (Дизайн Сайтів)
+    </button>
+
+    <!--  <button class="course-tab" data-course="english">
+      Англійська
+    </button> -->
+
+    <button class="course-tab" data-course="math">
+      Курси підготовки до іспитів
+    </button> 
+
+     <button class="course-tab" data-course="school">
+      Шкільні Предмети
+    </button>
+
+
+  </div>
+
+  <!-- =========================
+POPULAR
+========================= -->
+
+  <div class="cards-grid active-grid" id="popular">
+
+<div class="course-card">
+<a href="CartHelpCourses.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Help Courses.png')">
+      </div>
+
+      <div class="course-info">
+ <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">8200 грн</span>
+        <span class="new-price">4286 грн</span>
+      </span>
+
+  <h3> Курси Допомоги Батькам</h3>
+</a>
+  <p>
+    Курси в яких дітки або підлітки вчаться допомогати батькам при роботі з софтом комп'ютера.  
+  </p>
+  <br>
+
+  <button class="add-to-cart">
+    Додати в кошик
+  </button>
+
+</div>
+    </div>
+
+
+    <div class="course-card">
+      <a href="CartPytonAI.html" class="course-link">
+
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Python+Ai.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python + AI (Штучний Інтелект)
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">5600 грн</span>
+        <span class="new-price">3920 грн</span>
+      </span>
+      <br>
+        
+
+        <h3>
+          Python + AI
+        </h3>
+</a>
+        <p>
+          Програмування на Python, для підлітків, а також робота з топовими Ai сервісами.
+        </p>
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+  <a href="CartCourseAi.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/AiCourses.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          AI (Штучний Інтелект)
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">5500 грн</span>
+        <span class="new-price">3850 грн</span>
+      </span>
+
+        <h3>
+          Виключно AI сервіси
+        </h3>
+</a>
+        <p>
+          Робота з кращими AI сервісами, вивчення їх можливостей та функціоналу 
+        </p>
+        <br>
+        <button class="add-to-cart">
+          Додати в кошик
+        </button>
+
+      </div>
+
+    </div>
+
+
+ <div class="course-card">
+  <a href="CartPytonFun.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/PythonFunProjects.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4900 грн</span>
+        <span class="new-price">3430 грн</span>
+      </span>
+
+        <h3>
+          Python Fun Projects
+        </h3>
+</a>
+        <p>
+          Ігри та багато цікавих проектів для дітей на Python
+        </p>
+        <button class="add-to-cart">
+          Додати в кошик
+        </button>
+
+      </div>
+
+    </div>  
+
+
+
+    <div class="course-card">
+  <a href="CarеProgramLan.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Lang.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+         Python/Java/C#
+        </span>
+
+       
+        <span class="new-price">3850 грн</span>
+      </span>
+
+        <h3>
+          Вивчення мов програмування
+        </h3>
+</a>
+        <p>
+          Робота з декількома мовами програмування, для визначення найбільш підходящої
+        </p>
+        <br>
+        <button class="add-to-cart">
+          Додати в кошик
+        </button>
+
+      </div>
+
+    </div>
+  
+
+  <div class="course-card">
+<a href="CartMinecraftJun.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Minecraft Junior.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Minecraft Junior 
+        </span>
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4700 грн</span>
+        <span class="new-price">3290 грн</span>
+      </span>
+
+        <h3>
+          Курси Minecraft від 7-10 років
+        </h3>
+</a>
+        <p>
+          Вивчення гри Minecraft, створення світів, вивчення шкільних предметів, блочне програмування для діток.
+        </p>
+         <br>
+          <button class="add-to-cart">
+            Додати в кошик
+          </button>
+
+      </div>
+
+    </div>
+ 
+
+
+    <div class="course-card">
+<a href="CartRoblox.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/RobloxGame.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Roblox
+        </span>
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4700 грн</span>
+        <span class="new-price">3290 грн</span>
+      </span>
+
+        <h3>
+          Roblox Studio 
+        </h3>
+</a>
+        <p>
+          Курси зі сворення динамічних світів в Roblox Studio Game
+        </p>
+        <br>
+        <button class="add-to-cart">
+            Додати в кошик
+          </button>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+DISCOUNT
+========================= -->
+
+  <div class="cards-grid" id="discount">
+
+    <div class="course-card">
+<a href="CartRoblox.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/RobloxGame.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4700 грн</span>
+        <span class="new-price">3290 грн</span>
+      </span>
+        
+
+
+        <h3>
+          Roblox Studio 
+        </h3>
+</a>
+        <p>
+          Курси зі сворення динамічних світів в Roblox Studio Game
+        </p>
+        <br>
+          <button class="add-to-cart">
+            Додати в кошик
+          </button>
+
+      </div>
+    </div>
+
+
+      <div class="course-card">
+<a href="CartMinecrafAdvanced.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Minecraft Advanced.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">5000 грн</span>
+        <span class="new-price">3500 грн</span>
+      </span>
+
+        <h3>
+          Minecraft Advanced від 11 років
+        </h3>
+</a>
+        <p>
+          Курси Minecraft, поглиблює знання в блочному програмуванні, архітектурі та шкільних предметах.
+        </p>
+        <br>
+          <button class="add-to-cart">
+            Додати в кошик
+          </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+<a href="AiSite.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/AiWebSite.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">6900 грн</span>
+        <span class="new-price">4830 грн</span>
+      </span>
+
+        <h3>
+          Cтворення сайтів за допомогою AI
+        </h3>
+</a>
+        <p>
+          Працюйте с кращими AI Сервісами, такими як ChatGpt, Midjourney для створення якісних веб-сайтів. 
+        </p>
+        <br>
+          <button class="add-to-cart">
+            Додати в кошик
+          </button>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+<a href="CartPyton2.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Python11.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        
+       <span class="old-price">5400 грн</span>
+      <span class="new-price">3780 грн</span>
+      </span>
+
+       
+
+        <h3>
+          Python для підлітків від 11-14 років
+        </h3>
+        </a>
+        <p>
+          Вивчення популярної мови програмування, на якій створються AI сервіси для підлітків. 
+        </p>
+
+
+        <br>
+          <button class="add-to-cart">
+            Додати в кошик
+          </button>
+
+        
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+<a href="CartPytonBasic.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Py.png')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4600 грн</span>
+        <span class="new-price">3220 грн</span>
+      </span>
+
+        <h3>
+          Python Start
+        </h3>
+</a>
+        <p>
+          Основи програмування на Python 
+        </p>
+        <br>
+          <button class="add-to-cart">
+            Додати в кошик
+          </button>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+
+
+
+
+    </div>
+
+    
+
+  <!-- =========================
+HELP
+========================= -->
+
+  <div class="cards-grid" id="help">
+    
+    
+    <div class="course-card">
+<a href="CartHelpCourses.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/HelpCourses.jpg')">
+      </div>
+
+      <div class="course-info">
+ <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">8200 грн</span>
+        <span class="new-price">5740 грн</span>
+      </span>
+
+  <h3> Help Courses</h3>
+</a>
+  <p>
+    Курси допомоги, якщо наші учні не можуть визначитися, в обраному напрямку.  
+  </p>
+  <br>
+
+  <button class="add-to-cart">
+    Додати в кошик
+  </button>
+
+</div>
+    </div>
+
+
+    <div class="course-card">
+<a href="CartHelpCourses.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Help Courses.png')">
+      </div>
+
+      <div class="course-info">
+ <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">8200 грн</span>
+        <span class="new-price">5740 грн</span>
+      </span>
+
+  <h3> Курси Допомоги Батькам</h3>
+</a>
+  <p>
+    Курси в яких дітки або підлітки вчаться допомогати батькам при роботі з сфотом комп'ютера.  
+  </p>
+  <br>
+
+  <button class="add-to-cart">
+    Додати в кошик
+  </button>
+
+</div>
+    </div>
+
+    
+
+
+
+
+    
+
+  </div>
+
+  
+  <!-- =========================
+PYTHON
+========================= -->
+
+  <div class="cards-grid" id="python">
+
+
+    <div class="course-card">
+<a href="CartPyton.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/PythonChild.png')">
+      </div>
+
+      <div class="course-info">
+
+
+        <span class="course-category">
+          Python
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">6900 грн</span>
+        <span class="new-price">4830 грн</span>
+      </span>
+
+        <h3>
+          Python Child 7-10 років
+        </h3>
+</a>
+        <p>
+          Програмування на Python (для вундеркіндів)
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+    
+      </div>
+
+    </div>
+
+    
+   
+    <div class="course-card">
+<a href="CartScratch.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Scratch.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Scratch
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">6900 грн</span>
+        <span class="new-price">4830 грн</span>
+      </span>
+
+        <h3>
+          Курси Scratch від 7-10 років
+        </h3>
+        </a>
+
+        <p>
+          Завдяки платформі Scratch, дітки вивчають блочне прорамування та створють свої анімаціїні сюжети
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="course-card">
+<a href="CartPytonAI.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Python+Ai.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python + AI (штучний інтелект)
+        </span>
+
+         <span class="course-category sale-badge">
+        Sale -30% 
+        <span class="old-price">5600 грн</span>
+        <span class="new-price">3920 грн</span>
+      </span>
+
+        <h3>
+          Python + AI
+        </h3>
+</a>
+        <p>
+          Вивчення язика програмування, а також робота з AI нейромережами
+        </p>
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+<a href="CartPytonBasic.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Py.png')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python
+        </span>
+
+         <span class="course-category sale-badge">
+        Sale -30% 
+        <span class="old-price">4600 грн</span>
+        <span class="new-price">3220 грн</span>
+      </span>
+
+        <h3>
+          Python Start
+        </h3>
+</a>
+        <p>
+          Основи програмування на Python 
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+<a href="CartPytonFun.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/PythonFunProjects.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python 
+        </span>
+
+        <!-- <span class="course-category sale-badge">
+        Sale -30% -->
+        <span class="old-price">4900 грн</span>
+        <span class="new-price">3430 грн</span>
+      </span>
+
+        <h3>
+          Python Fun Projects
+        </h3>
+</a>
+        <p>
+          Ігри та багато цікавих проектів для дітей на Python
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>  
+  </div>
+
+
+
+
+  <!-- !-- =========================
+  Для Підлітків
+=========================  -->
+
+  <div class="cards-grid" id="teens">
+
+    <div class="course-card">
+<a href="CartPyton2.html" class="course-link">
+  
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Python11.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python Basic
+        </span>
+         <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">5400 грн</span>
+        <span class="new-price">3780 грн</span>
+      </span>
+
+        <h3>
+          Python для підлітків від 11-14 років 
+        </h3>
+</a>
+        <p>
+          Основи програмування на Python для підлітків, робота з кодом, робота з данними
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+
+<a href="CartPyton15.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Python15.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+       <span class="old-price">5600 грн</span>
+        <span class="new-price">3920 грн</span>
+      </span>
+
+        <h3>
+          Python для підлітків від 15-17 років
+        </h3>
+</a>
+        <p>
+          Основи програмування на Python для підлітків, робота з кодом, робота з данними, з серверами.
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+<a href="CartPytonAI.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Python+Ai.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python + AI (штучний інтелект)
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">5600 грн</span>
+        <span class="new-price">3920 грн</span>
+      </span>
+
+        <h3>
+          Python + AI
+        </h3>
+</a>
+        <p>
+          Вивчення язика програмування, а також робота з AI нейромережами
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+<a href="CartPytonFun.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/PythonFunProjects.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4900 грн</span>
+        <span class="new-price">3430 грн</span>
+      </span>
+
+        <h3>
+          Python Fun Projects
+        </h3>
+</a>
+        <p>
+         Ігри та багато цікавих проектів для дітей на Python
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+<a href="CartPytonBasic.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Py.png')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4600 грн</span>
+        <span class="new-price">3220 грн</span>
+      </span>
+
+        <h3>
+          Python Start
+        </h3>
+</a>
+        <p>
+          Основи програмування на Python 
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="cards-grid" id="advanced">
+ 
+    <div class="course-card">
+<a href="CartProgramAdvanced.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/PythonAdvanced77.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python Advanced
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">6900 грн</span>
+        <span class="new-price">4830 грн</span>
+      </span>
+
+        <h3>
+          Python (Просунуті Курси)
+        </h3>
+</a>
+        <p>
+          Поглиблене вивчення язика програмування Python, для користувачів, які вже знайомі з програмуванням
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+<a href="CartCourseAi.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/AiCourses.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          AI (Штучний Інтелект)
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+         <span class="old-price">5500 грн</span>
+        <span class="new-price">3850 грн</span>
+      </span>
+
+        <h3>
+          Виключно AI сервіси
+        </h3>
+</a>
+        <p>
+          Робота з кращими AI сервісами, вивчення їх можливостей та функціоналу 
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+  <a href="AiSite.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/AiWebSite.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          AI + Створення Веб-Сайтів
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">6900 грн</span>
+        <span class="new-price">4830 грн</span>
+      </span>
+
+        <h3>
+          Cтворення сайтів за допомогою AI
+        </h3>
+</a>
+        <p>
+          Працюйте с кращими AI Сервісами, такими як ChatGpt, Midjourney для створення якісних веб-сайтів
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- AI -->
+
+
+  <div class="cards-grid" id="ai">
+ 
+    <div class="course-card">
+
+   <a href="CartPytonAI.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Python+Ai.jpg')">
+      </div>
+
+      <!-- <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">6900 грн</span>
+        <span class="new-price">4830 грн</span>
+      </span> Цена біля картинки -->
+
+  
+
+      <div class="course-info">
+
+        <span class="course-category">
+        Python + AI (Штучний Інтелект)
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+       <span class="old-price">5600 грн</span>
+        <span class="new-price">3920 грн</span>
+      </span>
+
+        <h3>
+          Python + AI
+        </h3>
+</a>
+        <p>
+          Вивчення язика програмування, а також робота з AI нейромережами
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+<a href="CartCourseAi.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/AiCourses.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          AI (Штучний Інтелект)
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">5500 грн</span>
+        <span class="new-price">3850 грн</span>
+      </span>
+
+        <h3>
+          Виключно AI сервіси
+        </h3>
+</a>
+        <p>
+          Робота з кращими AI сервісами, вивчення їх можливостей та функціоналу 
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+<a href="AiSite.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/AiWebSite.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          AI + Створення Веб-Сайтів
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">6900 грн</span>
+        <span class="new-price">4830 грн</span>
+      </span>
+
+        <h3>
+          Cтворення сайтів за допомогою AI
+        </h3>
+</a>
+        <p>
+          Працюйте с кращими AI Сервісами, такими як ChatGpt, Midjourney для створення якісних веб-сайтів. 
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!--   GameDEV-->
+
+  <div class="cards-grid" id="minecraft">
+
+
+    <div class="course-card">
+<a href="CartMinecraftJun.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Minecraft Junior.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Minecraft Junior 
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4700 грн</span>
+        <span class="new-price">3290 грн</span>
+      </span>
+
+        <h3>
+          Курси Minecraft від 7-10 років
+        </h3>
+</a>
+        <p>
+          Вивчення гри Minecraft, створення світів, вивчення шкільних предметів, блочне програмування для діток
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+  
+
+    <div class="course-card">
+<a href="CartMinecrafAdvanced.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Minecraft Advanced.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Minecraft Advanced 
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">5000 грн</span>
+        <span class="new-price">3500 грн</span>
+      </span>
+
+        <h3>
+          Minecraft для дітей від 10 до 14 років
+        </h3>
+</a>
+        <p>
+          Курси Minecraft, поглиблює знання в блочному програмуванні, архітектурі та шкільних предметах.
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+    </div>
+
+    <div class="course-card">
+<a href="CartRoblox.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/RobloxGame.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Roblox
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4700 грн</span>
+        <span class="new-price">3290 грн</span>
+      </span>
+
+        <h3>
+          Roblox Studio 
+        </h3>
+</a>
+        <p>
+          Курси зі сворення динамічних світів в Roblox Studio Game
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+    <div class="course-card">
+<a href="CartPytonFun.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/PythonFunProjects.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Python
+        </span>
+
+        <!-- <span class="course-category sale-badge">
+        Sale -30% -->
+        <span class="old-price">4900 грн</span>
+        <span class="new-price">3430 грн</span>
+      </span>
+
+        <h3>
+          Python Fun Projects
+        </h3>
+</a>
+        <p>
+          Ігри та багато цікавих проектів для дітей на Python
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+  </div>
+  
+
+
+  <!-- FRONT END -->
+
+   <div class="cards-grid" id="frontend">
+
+    <div class="course-card">
+<a href="CartFrontEnd.html" class="course-link">
+
+      <div class="course-image"
+      style="background-image:url('ImagesCards/FrontEnd.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Front End
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">5200 грн</span>
+        <span class="new-price">3640 грн</span>
+      </span>
+
+        <h3>
+          Курси FrontEnd від 11-17 років
+        </h3>
+</a>
+  
+      <p>
+          Курси зі створення посадочних сторінок для веб-сайтів на мові програмування HTML/CSS/JS
+        </p>
+        <br>
+
+         <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+    </a>
+
+
+  
+    <div class="course-card">
+<a href="CartScratch.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Scratch.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Scratch
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4700 грн</span>
+        <span class="new-price">3290 грн</span>
+      </span>
+
+        <h3>
+          Курси Scratch від 7-10 років
+        </h3>
+</a>
+       
+
+        <p>
+          Завдяки платформі Scratch, дітки вивчають блочне прорамування та створють свої анімаціїні сюжети.
+        </p>
+
+        <br>
+
+         <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+    
+
+  </div>
+
+
+
+  <!--   Scratch -->
+
+  <div class="cards-grid" id="roblox">
+
+
+    <div class="course-card">
+<a href="CartScratch.html" class="course-link">
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Scratch.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Scratch
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4700 грн</span>
+        <span class="new-price">3290 грн</span>
+      </span>
+
+        <h3>
+          Курси Scratch від 7-10 років
+        </h3>
+        </a>
+
+        <p>
+          Завдяки платформі Scratch, дітки вивчають блочне прорамування та створють свої анімаціїні сюжети.
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="cards-grid" id="math">
+
+
+    <div class="course-card">
+
+      <a href="CartNMT.html" class="course-link">
+
+      <div class="course-image" style="background-image:url('ImagesCards/NMT.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Курси НМТ (10-12 класи)
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">6900 грн</span>
+        <span class="new-price">4830 грн</span>
+      </span>
+
+        <h3>
+          Курси Підготовки до НМТ
+        </h3>
+        </a>
+
+        <p>
+          Повний курс підготовки до НМТ, для підлітків, за самими просунутими технологіями 
+        </p>
+
+        <br>
+        
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+   
+
+  </div>
+
+
+
+  <div class="cards-grid" id="school">
+
+  <div class="course-card" style="text-align:center; padding:60px 20px;">
+    
+    <h2>🚀 Курси будуть доступні</h2>
+
+    <p style="font-size:1.2rem; margin-top:15px;">
+      з <strong>1 вересня 2026 року</strong>
+    </p>
+
+    <p style="margin-top:10px; color:#666;">
+      Наразі ми готуємося до підготови навчальних програм з нового начального семестру.
+    </p>
+    <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+  </div>
+
+</div>
+
+  <!-- =========================
+DESIGN
+========================= -->
+
+  <div class="cards-grid" id="design">
+
+    <div class="course-card">
+
+      <a href="CartCanva.html" class="course-link"> 
+
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Canva.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Canva
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4000 грн</span>
+        <span class="new-price">2800 грн</span>
+      </span>
+
+        <h3>
+          Canva Design
+        </h3>
+        </a>
+        
+        
+
+
+        <p>
+          Курси по створеню банерів для сайтів, ведення Соц.мереж та створення інших креативів. 
+        </p>
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+      <a href="CartPhotoShop.html" class="course-link"> 
+
+      <div class="course-image"
+      style="background-image:url('ImagesCards/Photoshop.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          Курси з Photoshop
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">4200 грн</span>
+        <span class="new-price">2940 грн</span>
+      </span>
+
+        <h3>
+           Робота в Photoshop 
+        </h3>
+        </a>
+
+        <p>
+           Робота з графікою та фотографією в Photoshop для початківців
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+
+    <div class="course-card">
+
+      <a href="CartPhotoShopAdvanced.html" class="course-link">  
+
+      <div class="course-image"
+      style="background-image:url('ImagesCards/PhotoshopAdvanced.jpg')">
+      </div>
+
+      <div class="course-info">
+
+        <span class="course-category">
+          PhotoShop Advanced
+        </span>
+
+        <span class="course-category sale-badge">
+        Sale -30%
+        <span class="old-price">5100 грн</span>
+        <span class="new-price">3570 грн</span>
+      </span>
+
+        <h3>
+          Курси Photoshop просунуті
+        </h3>
+
+        </a>
+
+        <p>
+          Курси з Фотошопу, для користувачів, які вже працювали в Adobe PhotoShop Editor
+        </p>
+
+        <br>
+        
+
+        <button class="add-to-cart">
+          
+  Додати в кошик
+</button>
+
+      </div>
+
+    </div>
+
+  </div>
+<!-- 
+   <div class="catalog-btn"> -->
+
+<a href="#courses" class="catalog-btn">
+  <div class="catalog-icon">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+  <p>Каталог курсів </p>
+</a>
+<!-- </div> -->
+
+
+<!-- =========================
+AI SECTION
+========================= -->
+
+<div class="ai-section">
+
+<div class="ai-orbits">
+  <span class="orbit orbit1"></span>
+  <span class="orbit orbit2"></span>
+  <span class="orbit orbit3"></span>
+
+</div>
+
+  <div class="ai-top">
+    <div class="ai-badge">AI • Future Skills</div>
+
+    <h2>Просунута робота з Штучним Інтелектом</h2>
+
+    <p>
+      В програми наших курсів інтегровано вивчення сучасних AI-інструментів:
+      ChatGPT, Leonardo AI, GitHub Copilot, Midjourney, Runway ML,
+      ElevenLabs та інших технологій майбутнього.
+      <br><br>
+      <span class="ai-highlight">Учні бачать реальну роботу з AI вже під час навчання.</span>
+    </p>
+
+    
+  </div>
+
+  <div class="ai-grid">
+
+    <div class="ai-card big">
+      <img src="ImagesCards/Chat77.gif">
+      
+    </div>
+
+    <div class="ai-card">
+      <img src="ImagesCards/77.gif">
+      <div class="ai-overlay leonardo">
+        <h3>Leonardo AI</h3>
+        <p>Генерація зображень і креативу.</p>
+      </div>
+    </div>
+
+    <div class="ai-card">
+      <img src="ImagesCards/copilot7.gif" style="object-position: left center;">
+      <div class="ai-overlay copilot">
+        <h3>GitHub Copilot</h3>
+        <p>Розумне програмування разом з AI Copilot.</p>
+      </div>
+    </div>
+
+    <div class="ai-card wide" style = "height: 180px";>
+      <img src="ImagesCards/MidJourney.gif">
+      <div class="ai-overlay future">
+        <h3>MidJourney AI</h3>
+        <p>Діти працюють з технологіями нового покоління для створення відео та графіки</p>
+      </div>
+    </div>
+
+    <div class="ai-card wide" style = "height: 180px";>
+      <img src="ImagesCards/Runway.gif">
+      <div class="ai-overlay future">
+        <h3>RunWay AI</h3>
+        <p>AI платформа для генерації та редагування відео, зображень та аудіо</p>
+      </div>
+    </div>
+
+  </div>
+<!-- 
+<div class="ai-button-wrap">
+  <button class="ai-button">
+    <span>Перейти до курсів</span>
+  </button>
+</div>  -->
+
+<div class="ai-button-wrap">
+  <a href="#courses" class="ai-button">
+    <span>Перейти до курсів</span>
+  </a>
+</div>
+
+</div>
+
+<!-- <div class="next-scroll-text">
+  Потрібно більше інформації? Тоді гортайте далі -->
+
+  <div class="scroll-indicator">
+  
+  <span></span>
+  
+</div>
+<!-- </div> -->
+
+<section class="advantages-section">
+
+  <div class="advantages-header">
+  
+    <h2>Переваги навчання в  <br> <span class="advantages-badge"> OrbIT School</span></h2>
+    <br>
+    <p>
+      Ми не просто навчаємо програмуванню. Ми створюємо середовище,
+      де дитина отримує максимум уваги, практики та підтримки.
+    </p>
+  </div>
+
+<div class="advantages-wrapper">
+
+  <button class="adv-arrow left" onclick="scrollAdv(-1)">‹</button>
+
+  <div class="advantages-grid" id="advGrid">
+
+<div class="adv-card">
+  <!-- <div class="adv-icon">👥</div>  -->
+  <div class="screen-box">
+  <img src="ImagesCards/1.jpg" alt="">
+</div> 
+<br>
+  <h3>Групи до 5 учнів</h3>
+  <p>
+    На практиці ми переконалися, що невеликі групи дозволяють
+    викладачу приділяти достатньо уваги кожному учню.
+    У групах по 10–15 дітей неможливо однаково якісно контролювати
+    засвоєння матеріалу всіма учасниками.
+  </p>
+</div>
+
+<div class="adv-card">
+  <!-- <div class="adv-icon">💻</div> -->
+   <div class="screen-box">
+  <img src="ImagesCards/221.jpeg"  alt="">
+</div> 
+<br>
+  <h3>Максимум практики</h3>
+  <p>
+    Кожне заняття містить реальні завдання, створення проєктів
+    та роботу з сучасними інструментами програмування.
+  </p>
+</div>
+
+<div class="adv-card">
+  <!-- <div class="adv-icon">🤖</div> -->
+  <div class="screen-box">
+  <img src="ImagesCards/Ai.jpg" alt="">
+</div>
+<br>
+  <h3>Інтеграція AI</h3>
+  <p>
+    Учні працюють із ChatGPT, GitHub Copilot, Leonardo AI,
+    MidJourney та іншими інструментами, які вже сьогодні
+    використовують професіонали.
+  </p>
+</div>
+
+<div class="adv-card">
+    <!-- <div class="adv-icon">📚</div> -->
+  <div class="screen-box">
+  <img src="ImagesCards/Result.jpg" alt="">
+</div> 
+<br>
+  <h3>Результат з перших занять</h3>
+  <p>
+    Діти створюють власні сайти, ігри та проєкти вже під час
+    навчання, бачачи реальний результат своєї роботи.
+  </p>
+</div>
+  
+<div class="adv-card">
+  <!-- <div class="adv-icon">🧠</div> -->
+<div class="screen-box">
+  <img src="ImagesCards/individual.jpg" alt="">
+</div> 
+<br>
+  <h3>Індивідуальний підхід</h3>
+  <p>
+    Кожен учень рухається у власному темпі. Викладач адаптує завдання
+    під рівень дитини, щоб забезпечити стабільний прогрес без стресу.
+  </p>
+</div>
+
+<div class="adv-card">
+<div class="screen-box">
+  <img src="ImagesCards/34.jpg" alt="">
+</div>
+<br>
+  <h3>Постійна Підтримка</h3>
+  <p>
+    Постійна підтримка вчителя, його настанови та рекомендації для покращення рівня знань, допомога в навчанні, 
+    перевірка домащніх завдань та фідбек з результами. 
+  </p>
+</div>
+
+<div class="adv-card">
+<div class="screen-box">
+  <img src="ImagesCards/learn.jpg" alt="">
+</div>
+<br>
+  <h3>Безкоштовне навчання</h3>
+  <p>
+    Кожен учень, який показує безперечні результати в навчанні, має змогу отримати певний період безкоштовного навчання.
+  </p>
+</div> 
+
+
+
+</div>
+
+   <button class="adv-arrow right" onclick="scrollAdv(1)">›</button>
+
+</div>
+</section>
+
+
+<section class="student-results">
+ <div class="results-orbits">
+  <span class="orbit orbit1"> </span>
+  <span class="orbit orbit2"></span>
+  <span class="orbit orbit3"></span>
+  <span class="orbit orbit4"></span>
+  <span class="orbit orbit5"></span>
+  <span class="orbit orbit6"></span>
+  <span class="orbit orbit7"></span>
+</div> 
+
+  <div class="section-header">
+    <h2>Наші учні можуть</h2>
+  </div>
+
+  <!-- 1 -->
+  <div class="snake-item">
+    <div class="snake-content">
+      <h3>🎮 Створювати власні міні-ігри</h3>
+      <p>
+        Учні створюють персонажів, рівні, анімації та логіку гри
+        вже під час навчання.
+      </p>
+    </div>
+
+    <div class="snake-image">
+      <img src="ImagesCards/Roblox77.gif">
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="snake-item reverse">
+    <div class="snake-content">
+      <h3>🧠 Розв'язувати задачі по програмуванню</h3>
+      <p>
+        Деякі учні вже у молодших класах проходять тести та
+        виконують завдання значно вище свого віку.
+      </p>
+    </div>
+
+    <div class="snake-image">
+      <img src="ImagesCards/kaggle.gif">
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="snake-item">
+    <div class="snake-content">
+      <h3>🌐 Створювати власні сайти</h3>
+      <p>
+        Вивчають HTML, CSS та JavaScript і запускають свої
+        перші вебпроєкти.
+      </p>
+    </div>
+
+    <div class="snake-image">
+      <img src="ImagesCards/Site34.gif">
+    </div>
+  </div>
+
+
+  <!-- 4 карточка -->
+<div class="snake-item reverse">
+
+  <div class="snake-content">
+    <h3>🏆 Успішно проходити тести (ЗНО, ВНЗ, IT)</h3>
+    <p>
+      Успішно проходити тестування на різних платформах для закріплення знань, а також тести для НМТ, вступні ВНЗ, IT, предметні, сертифікаційні та інші.
+    </p>
+  </div>
+
+  <div class="snake-image">
+    <img src="ImagesCards/Test.gif" alt="">
+  </div>
+
+</div>
+
+<!-- 5 карточка -->
+<!-- <div class="snake-item reverse">
+
+  <div class="snake-image">
+    <img src="ImagesCards/team.gif" alt="">
+  </div>
+
+  <div class="snake-content">
+    <h3>🧑 Працювати з гтучним інтелектом </h3>
+    <p>
+      Працювати з топовими платформами штучного інтелекту
+    </p>
+  </div>  -->
+
+<!-- 5 карточка -->
+ <div class="snake-item reverse">
+
+  <div class="snake-image">
+    <img src="ImagesCards/team.gif" alt="">
+  </div>
+
+  <div class="snake-content">
+    <h3>🧑 Працювати з топовими спеціалістами</h3>
+    <p>
+      Працювати з топовими спеціалістами в своїй індустрії (вчителями, IT-фахівцями, власниками бізнесів, тощо...)
+    </p>
+  </div> 
+</div>
+
+
+</section>
+
+<!--
+<section class="teachers-section">
+
+  <div class="teachers-header">
+    <h2>Наші викладачі</h2>
+    <p>Професіонали, які навчають та надихають учнів</p>
+  </div>
+
+  <div class="teachers-slider">
+
+    <div class="teacher-card">
+      <img src="ImagesCards/T1.jpg" alt="">
+      <h3>Олександр</h3>
+      <span>Java Developer</span>
+
+      <div class="teacher-stats">
+        <p>🎓 8+ років досвіду</p>
+        <p>💻 120+ учнів</p>
+      </div>
+    </div>
+
+    <div class="teacher-card">
+      <img src="teachers/teacher2.jpg" alt="">
+      <h3>Анна</h3>
+      <span>Frontend Developer</span>
+
+      <div class="teacher-stats">
+        <p>🎓 6+ років досвіду</p>
+        <p>💻 90+ учнів</p>
+      </div>
+    </div>
+
+    <div class="teacher-card">
+      <img src="teachers/teacher3.jpg" alt="">
+      <h3>Максим</h3>
+      <span>Python & AI</span>
+
+      <div class="teacher-stats">
+        <p>🎓 7+ років досвіду</p>
+        <p>💻 140+ учнів</p>
+      </div>
+    </div>
+
+    <div class="teacher-card">
+      <img src="teachers/teacher4.jpg" alt="">
+      <h3>Артем</h3>
+      <span>Roblox Developer</span>
+
+      <div class="teacher-stats">
+        <p>🎓 5+ років досвіду</p>
+        <p>💻 80+ учнів</p>
+      </div>
+    </div>
+
+    <div class="teacher-card">
+      <img src="teachers/teacher5.jpg" alt="">
+      <h3>Ірина</h3>
+      <span>Data Science</span>
+
+      <div class="teacher-stats">
+        <p>🎓 9+ років досвіду</p>
+        <p>💻 150+ учнів</p>
+      </div>
+    </div>
+
+    <div class="teacher-card">
+      <img src="teachers/teacher6.jpg" alt="">
+      <h3>Олена</h3>
+      <span>Математика</span>
+
+      <div class="teacher-stats">
+        <p>🎓 12+ років досвіду</p>
+        <p>📚 300+ учнів</p>
+      </div>
+    </div>
+
+    <div class="teacher-card">
+      <img src="teachers/teacher7.jpg" alt="">
+      <h3>Дмитро</h3>
+      <span>Англійська мова</span>
+
+      <div class="teacher-stats">
+        <p>🎓 10+ років досвіду</p>
+        <p>🇬🇧 250+ учнів</p>
+      </div>
+    </div>
+
+  </div>
+<div class="slider-controls">
+  <button class="slider-btn prev">&#10094;</button>
+  <button class="slider-btn next">&#10095;</button>
+</div>
+
+
+
+</section> -->
+
+
+<section class="for-who-section">
+
+  <div class="section-header">
+    <h2>Для кого підійде навчання</h2>
+    <p>Програма адаптована під вік та рівень учня</p>
+  </div>
+
+  <div class="for-who-grid">
+
+    <div class="for-card">
+      <div class="icon">👦</div>
+      <h3>7–10 років</h3>
+      <p>Перше знайомство з IT, логікою та іграми.</p>
+    </div>
+
+    <div class="for-card">
+      <div class="icon">🧑</div>
+      <h3>11–14 років</h3>
+      <p>Програмування та створення власних проєктів.</p>
+    </div>
+
+
+    <div class="for-card">
+  <div class="icon">👩‍💼</div>
+  <h3>Покращення знань</h3>
+  <p>
+    Для тих, хто хоче покращити шкільні знання з окремих предметів.
+  </p>
+</div>
+
+  
+
+    <div class="for-card">
+      <div class="icon">👨‍🎓</div>
+      <h3>15–17 років</h3>
+      <p>Підготовка до ВНЗ, НМТ та старт IT-кар'єри</p>
+    </div>
+
+    <div class="for-card">
+      <div class="icon">👨‍💻</div>
+      <h3>Дорослі</h3>
+      <p>Нова професія або підвищення кваліфікації</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="consultation-section" id="consult7">
+
+  <div class="consult-nav">
+
+    <div class="consult-nav-logo">
+      🚀 ORBIT School
+    </div>
+
+    <div class="consult-nav-info">
+      <span>📞 +38 097 722 89 62</span>
+      <span>⚡ Відповідь протягом 15 хв</span>
+    </div>
+
+  </div>
+
+  <div class="consultation-container">
+
+    <div class="consultation-text">
+      <span class="consultation-badge">Безкоштовна консультація</span>
+
+      <h2>Запишіться на консультацію</h2>
+
+      <p>
+        Залиште свої контакти, і ми допоможемо обрати курс,
+        відповімо на всі запитання та підберемо зручний графік навчання.
+      </p>
+    </div>
+
+    <form class="consultation-form">
+
+      <div class="form-group">
+        <input type="text" placeholder="Ваше ім'я" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" placeholder="Email" required>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" placeholder="Телефон" required>
+      </div>
+
+      <label class="checkbox-wrap">
+        <input type="checkbox" required>
+        <span>Я погоджуюсь на обробку персональних даних</span>
+      </label>
+
+      <button type="submit" class="consult-btn">
+        Записатися на консультацію
+      </button>
+
+    </form>
+
+  </div>
+
+  <!-- 🔥 FOOTER внутри этого же блока -->
+  <!-- <footer class="footer"> -->
+<br>
+<br>
+<br>
+    <div class="footer-content">
+
+      <div class="footer-logo">
+        🚀  Чекаємо на вас
+      </div>
+
+      <!-- <div class="footer-links">  
+        <a href="#">Курси</a>
+        <a href="#">Викладачі</a>
+        <a href="#">Консультація</a>
+        <a href="#">Контакти</a> -->
+      <!-- </div> -->
+
+      <div class="footer-contact">
+        <!-- <p>📞 +38 (000) 000-00-00</p> -->
+        <p>✉️ info@orbit-school.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 ORBIT School. Усі права захищені.
+    </div>
+<!-- 
+  </footer> -->
+
+</section>
+
+
+
+<script src="cons.js"></script>
+<script type="module">
+
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160/build/three.module.js';
+
+// =====================
+// SCENE
+// =====================
+const scene = new THREE.Scene();
+
+const camera = new THREE.OrthographicCamera(
+  window.innerWidth / -2,
+  window.innerWidth / 2,
+  window.innerHeight / 2,
+  window.innerHeight / -2,
+  1,
+  3000
+);
+
+camera.position.z = 10;
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+// =====================
+// MOUSE
+// =====================
+const mouse = { x: 0, y: 0 };
+
+window.addEventListener('mousemove', (e) => {
+  mouse.x = (e.clientX - window.innerWidth / 2);
+  mouse.y = -(e.clientY - window.innerHeight / 2);
+});
+
+// =====================
+// PARTICLES
+// =====================
+const particlesCount = 130;
+const particlePositions = [];
+const particleSpeeds = [];
+
+const safeZone = 430;
+
+for (let i = 0; i < particlesCount; i++) {
+
+  let x, y;
+
+  do {
+    x = (Math.random() - 0.5) * window.innerWidth;
+    y = (Math.random() - 0.5) * window.innerHeight;
+  } while (Math.sqrt(x * x + y * y) < safeZone);
+
+  particlePositions.push({ x, y });
+  particleSpeeds.push({
+    x: (Math.random() - 0.5) * 0.18,
+    y: (Math.random() - 0.5) * 0.18
+  });
+}
+
+const positions = new Float32Array(particlesCount * 3);
+
+const geometry = new THREE.BufferGeometry();
+geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+const material = new THREE.PointsMaterial({
+  color: 0x111111,
+  size: 2,
+  transparent: true,
+  opacity: 0.7
+});
+
+const particles = new THREE.Points(geometry, material);
+scene.add(particles);
+
+// =====================
+// CLICK EFFECTS
+// =====================
+window.addEventListener('click', () => {
+
+  for (let i = 0; i < particlesCount; i++) {
+    particleSpeeds[i].x += (Math.random() - 0.5) * 0.8;
+    particleSpeeds[i].y += (Math.random() - 0.5) * 0.8;
+  }
+
+  const core = document.getElementById('core');
+  if (core) {
+    core.style.transform = "scale(2)";
+    setTimeout(() => {
+      core.style.transform = "scale(1)";
+    }, 200);
+  }
+
+});
+
+// =====================
+// ORBIT
+// =====================
+const orbitWrapper = document.getElementById('orbitWrapper');
+const orbitCards = document.querySelectorAll('.orbit-card');
+
+// =====================
+// ANIMATION
+// =====================
+function animate() {
+
+  requestAnimationFrame(animate);
+
+  const t = performance.now() * 0.00015;
+
+  if (orbitWrapper) {
+    orbitWrapper.style.transform = `rotate(${t}rad)`;
+  }
+
+  orbitCards.forEach(c => {
+    c.style.transform = `rotate(${-t}rad)`;
+  });
+
+  for (let i = 0; i < particlesCount; i++) {
+
+    particlePositions[i].x += particleSpeeds[i].x;
+    particlePositions[i].y += particleSpeeds[i].y;
+
+    particleSpeeds[i].x *= 0.99;
+    particleSpeeds[i].y *= 0.99;
+
+    positions[i * 3] = particlePositions[i].x;
+    positions[i * 3 + 1] = particlePositions[i].y;
+  }
+
+  geometry.attributes.position.needsUpdate = true;
+
+  renderer.render(scene, camera);
+}
+
+animate();
+
+// =====================
+// TABS
+// =====================
+const tabButtons = document.querySelectorAll('.course-tab, .filter-btn');
+const grids = document.querySelectorAll('.cards-grid');
+
+tabButtons.forEach(button => {
+
+  button.addEventListener('click', () => {
+
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const course = button.dataset.course;
+
+    grids.forEach(grid => grid.classList.remove('active-grid'));
+
+    const target = document.getElementById(course);
+
+    if (target) {
+      target.classList.add('active-grid');
+    }
+
+  });
+
+});
+
+// =====================
+// ADV SLIDER
+// =====================
+document.addEventListener("DOMContentLoaded", () => {
+
+  const grid = document.getElementById("advGrid");
+  const advCards = document.querySelectorAll(".adv-card");
+
+  let index = 0;
+  const visibleCards = 4;
+
+  function updateSlider() {
+    if (!grid || advCards.length === 0) return;
+
+    const cardWidth = advCards[0].offsetWidth + 20;
+    grid.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
+
+  function scrollAdv(direction) {
+
+    const maxIndex = advCards.length - visibleCards;
+
+    index += direction;
+
+    if (index < 0) index = 0;
+    if (index > maxIndex) index = maxIndex;
+
+    updateSlider();
+  }
+
+  window.scrollAdv = scrollAdv;
+
+});
+
+// =====================
+// TEACHERS SLIDER
+// =====================
+const teacherSlider = document.querySelector('.teachers-slider');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+
+if (teacherSlider && nextBtn) {
+  nextBtn.addEventListener('click', () => {
+    teacherSlider.scrollBy({
+      left: 320,
+      behavior: 'smooth'
+    });
+  });
+}
+
+if (teacherSlider && prevBtn) {
+  prevBtn.addEventListener('click', () => {
+    teacherSlider.scrollBy({
+      left: -320,
+      behavior: 'smooth'
+    });
+  });
+}
+
+
+// HREF COURSES
+
+// document.getElementById("goCourses").addEventListener("click", () => {
+// document.getElementById("courses").scrollIntoView({
+//      behavior: "smooth"
+// });
+
+// });
+
+// =====================
+// CART
+// =====================
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartCount = document.getElementById("cart-count");
+const cartIcon = document.querySelector('.cart');
+const cartModal = document.getElementById('cart-modal');
+const cartItemsBox = document.getElementById('cart-items');
+const closeBtn = document.getElementById('close-cart');
+const confirmBtn = document.getElementById("confirm-cart");
+
+// обновить счётчик
+function updateCartCount() {
+  if (cartCount) {
+    cartCount.textContent = cart.length;
+  }
+}
+
+updateCartCount();
+
+// =====================
+// ADD TO CART
+// =====================
+
+document.querySelectorAll(".add-to-cart").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const card = button.closest(".course-card");
+
+    const name =
+      card.querySelector("h3")?.textContent.trim();
+
+    const priceText =
+      card.querySelector(".new-price")?.textContent;
+
+    const price =
+      parseInt(priceText.replace(/\D/g, ""));
+
+    cart.push({
+      name,
+      price
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+    renderCart();
+  });
+
+});
+
+// =====================
+// OPEN CART
+// =====================
+if (cartIcon && cartModal) {
+  cartIcon.addEventListener('click', () => {
+    renderCart();
+    cartModal.style.display = 'flex';
+  });
+}
+
+// =====================
+// CLOSE CART
+// =====================
+if (closeBtn && cartModal) {
+  closeBtn.addEventListener('click', () => {
+    cartModal.style.display = 'none';
+  });
+}
+
+// click outside
+if (cartModal) {
+  cartModal.addEventListener('click', (e) => {
+    if (e.target === cartModal) {
+      cartModal.style.display = 'none';
+    }
+  });
+}
+
+// =====================
+// CONFIRM ORDER
+// =====================
+if (confirmBtn) {
+  confirmBtn.addEventListener("click", () => {
+
+    if (cart.length === 0) {
+      alert("Корзина пуста!");
+      return;
+    }
+
+    // сохраняем корзину
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // переходим на checkout
+    window.location.href = "Checkout.html";
+  });
+}
+
+// =====================
+// RENDER CART
+// =====================
+function renderCart() {
+  if (!cartItemsBox) return;
+
+  cartItemsBox.innerHTML = '';
+
+  let total = 0;
+
+  if (cart.length === 0) {
+    cartItemsBox.innerHTML = '<p>Корзина пуста</p>';
+  }
+
+  cart.forEach((item, index) => {
+
+    total += item.price;
+
+    const div = document.createElement('div');
+
+    div.classList.add('cart-item');
+
+    div.innerHTML = `
+      <span>${item.name}</span>
+      <span>${item.price} грн</span>
+      <span class="remove-btn" data-index="${index}">✖</span>
+    `;
+
+    cartItemsBox.appendChild(div);
+  });
+
+  // 💰 ВОТ СУММА
+  document.getElementById("cart-total").textContent = total;
+
+  // ❌ удалить
+  document.querySelectorAll(".remove-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+
+      const i = e.target.dataset.index;
+
+      cart.splice(i, 1);
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      updateCartCount();
+      renderCart();
+    });
+  });
+}
+
+</script>
+
+<!-- // import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160/build/three.module.js';
+
+// const scene = new THREE.Scene();
+
+// const camera = new THREE.OrthographicCamera(
+//   window.innerWidth / -2,
+//   window.innerWidth / 2,
+//   window.innerHeight / 2,
+//   window.innerHeight / -2,
+//   1,
+//   3000
+// );
+
+// camera.position.z = 10;
+
+// const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
+// renderer.setSize(window.innerWidth, window.innerHeight);
+// document.body.appendChild(renderer.domElement);
+
+// // =====================
+// // MOUSE
+// // =====================
+// const mouse = { x:0, y:0 };
+
+// window.addEventListener('mousemove', (e)=>{
+//   mouse.x = (e.clientX - window.innerWidth/2);
+//   mouse.y = -(e.clientY - window.innerHeight/2);
+// });
+
+// // =====================
+// // PARTICLES
+// // =====================
+// const particlesCount = 130;
+// const particlePositions = [];
+// const particleSpeeds = [];
+
+// const safeZone = 430;
+
+// for(let i=0;i<particlesCount;i++){
+
+//   let x,y;
+
+//   do{
+//     x = (Math.random()-0.5)*window.innerWidth;
+//     y = (Math.random()-0.5)*window.innerHeight;
+//   } while(Math.sqrt(x*x+y*y) < safeZone);
+
+//   particlePositions.push({x,y});
+//   particleSpeeds.push({
+//     x:(Math.random()-0.5)*0.18,
+//     y:(Math.random()-0.5)*0.18
+//   });
+// }
+
+// const positions = new Float32Array(particlesCount*3);
+
+// const geometry = new THREE.BufferGeometry();
+// geometry.setAttribute('position', new THREE.BufferAttribute(positions,3));
+
+// const material = new THREE.PointsMaterial({
+//   color:0x111111,
+//   size:2,
+//   transparent:true,
+//   opacity:0.7
+// });
+
+// const particles = new THREE.Points(geometry, material);
+// scene.add(particles);
+
+// // =====================
+// // CLICK EFFECTS
+// // =====================
+
+// window.addEventListener('click', ()=>{
+
+//   // мягкий разлёт (НЕ слишком сильный)
+//   for(let i=0;i<particlesCount;i++){
+//     particleSpeeds[i].x += (Math.random()-0.5)*0.8;
+//     particleSpeeds[i].y += (Math.random()-0.5)*0.8;
+//   }
+
+//   // пульс сферы
+//   const core = document.getElementById('core');
+//   core.style.transform = "scale(2)";
+//   setTimeout(()=>{
+//     core.style.transform = "scale(1)";
+//   }, 200);
+
+// });
+
+// // =====================
+// // ORBIT (SLOW)
+// // =====================
+// const orbitWrapper = document.getElementById('orbitWrapper');
+// const cards = document.querySelectorAll('.orbit-card');
+
+// function animate(){
+
+//   requestAnimationFrame(animate);
+
+//   const t = performance.now()*0.00015;
+
+//   orbitWrapper.style.transform = `rotate(${t}rad)`;
+
+//   cards.forEach(c=>{
+//     c.style.transform = `rotate(${-t}rad)`;
+//   });
+
+//   for(let i=0;i<particlesCount;i++){
+
+//     particlePositions[i].x += particleSpeeds[i].x;
+//     particlePositions[i].y += particleSpeeds[i].y;
+
+//     // лёгкое затухание скорости (чтоб не улетали навсегда)
+//     particleSpeeds[i].x *= 0.99;
+//     particleSpeeds[i].y *= 0.99;
+
+//     positions[i*3] = particlePositions[i].x;
+//     positions[i*3+1] = particlePositions[i].y;
+//   }
+
+//   geometry.attributes.position.needsUpdate = true;
+
+//   renderer.render(scene,camera);
+// }
+
+// animate();
+
+// /* =========================
+// TABS
+// ========================= */
+
+// const allButtons =
+// document.querySelectorAll(
+//   '.course-tab, .filter-btn'
+// );
+
+// const grids =
+// document.querySelectorAll('.cards-grid');
+
+// allButtons.forEach(button=>{
+
+//   button.addEventListener('click',()=>{
+
+//     allButtons.forEach(btn=>{
+//       btn.classList.remove('active');
+//     });
+
+//     button.classList.add('active');
+
+//     const course =
+//       button.dataset.course;
+
+//     grids.forEach(grid=>{
+//       grid.classList.remove('active-grid');
+//     });
+
+//     const target =
+//       document.getElementById(course);
+
+//     if(target){
+//       target.classList.add('active-grid');
+//     }
+
+//   });
+
+// });
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+
+//   const grid = document.getElementById("advGrid");
+//   const cards = document.querySelectorAll(".adv-card");
+
+//   let index = 0;
+//   const visibleCards = 4;
+
+//   function updateSlider(){
+//     const card = cards[0];
+//     const cardWidth = card.offsetWidth + 20;
+
+//     grid.style.transform = `translateX(-${index * cardWidth}px)`;
+//   }
+
+//   function scrollAdv(direction){
+//     const maxIndex = cards.length - visibleCards;
+
+//     index += direction;
+
+//     if(index < 0) index = 0;
+//     if(index > maxIndex) index = maxIndex;
+
+//     updateSlider();
+//   }
+
+//   window.scrollAdv = scrollAdv;
+
+// });
+
+// const slider = document.querySelector('.teachers-slider');
+
+// document.querySelector('.next').addEventListener('click', () => {
+//   slider.scrollBy({
+//     left: 320,
+//     behavior: 'smooth'
+//   });
+// });
+
+// document.querySelector('.prev').addEventListener('click', () => {
+//   slider.scrollBy({
+//     left: -320,
+//     behavior: 'smooth'
+//   });
+// });
+
+
+// let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// const cartCount = document.getElementById("cart-count");
+
+// cartCount.textContent = cart.length;
+
+// document.querySelectorAll(".add-to-cart").forEach(button => {
+
+//     button.addEventListener("click", () => {
+
+//         const courseName = button.dataset.title;
+
+//         cart.push(courseName);
+
+//         localStorage.setItem("cart", JSON.stringify(cart));
+
+//         cartCount.textContent = cart.length;
+
+//         alert(courseName + " додано до кошика!");
+
+//     });
+
+// });
+
+
+</script> --> 
+
+</script>
+
+<div id="cart-modal" class="cart-modal">
+
+  <div class="cart-box">
+
+    <div class="cart-header">
+      <h2>🛒 Ваша корзина</h2>
+      <button id="close-cart" class="close-x">✕</button>
+    </div>
+
+    <!-- 👇 БЛОК С ИТОГО -->
+    <div class="cart-summary">
+      <div class="cart-count">
+        Товарів: <span id="cart-count">0</span>
+      </div>
+
+      <div class="cart-total">
+        Сума: <span id="cart-total">0</span> грн
+      </div>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+      <button id="confirm-cart" class="confirm-btn">
+        Подтвердить заказ
+      </button>
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+
+</body>
+</html>
