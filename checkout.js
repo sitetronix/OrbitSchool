@@ -79,7 +79,7 @@ if (form) {
       localStorage.removeItem("cart");
 
       alert("✅ Замовлення відправлено!");
-      window.location.href = "index1.html";
+      window.location.href = "index.html";
 
     } catch (err) {
       console.error(err);
