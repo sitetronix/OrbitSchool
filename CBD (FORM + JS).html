@@ -1,0 +1,73 @@
+<!-- FORM TOP NEW -->
+  <div class="contact-section">
+    <div class="contact-wrapper">
+
+      <div class="contact-text">
+        <h2>Отримайте консультацію</h2>
+        <p>Безкоштовна допомога методиста для вибору правильного курсу для дитини.</p>
+      </div>
+
+      <form class="form-box" id="tgForm">
+
+    <input name="name" placeholder="Ім'я" required>
+    <input name="surname" placeholder="Прізвище" required>
+    <input name="phone" placeholder="Телефон" required>
+    <input name="email" placeholder="Email" required>
+    <input type="hidden" name="course" value="Python для дітей 7-10 років">
+
+    <label class="checkbox">
+      <input type="checkbox" name="agree" required>
+      Я погоджуюсь на обробку даних
+    </label>
+
+    <button type="submit">Відправити</button>
+
+  </form>
+    </div>
+  </div>
+
+
+  const BOT_TOKEN = "8753837379:AAHcCFmHdbLTnv86OXDLiszfaGhVUr1Hj4A"; 
+const CHAT_ID = "6167594260";
+
+document.getElementById("tgForm").addEventListener("submit", (e) => {
+  e.preventDefault(); // блокируем стандартную отправку
+
+  const form = e.target;
+
+  const name = form.name.value.trim();
+  const surname = form.surname.value.trim();
+  const phone = form.phone.value.trim();
+  const email = form.email.value.trim();
+  const agree = form.agree.checked;
+  const course = form.course.value;
+
+  // доп. защита (хотя required уже работает)
+  if (!agree) {
+    alert("Потрібно погодитись на обробку даних");
+    return;
+  }
+
+  const message =
+`📩 Нова заявка:
+🎓 Курс: ${course}
+👤 Ім'я: ${name}
+👤 Прізвище: ${surname}
+📞 Телефон: ${phone}
+📧 Email: ${email}`;
+
+  fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      text: message
+    })
+  });
+
+  alert("Заявку відправлено!");
+  form.reset();
+});
+
